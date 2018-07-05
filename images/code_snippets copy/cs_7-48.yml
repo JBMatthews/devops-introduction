@@ -1,0 +1,16 @@
+--- 
+- name: Install WordPress 
+  hosts: all 
+  become: true 
+  tasks: 
+     - ping: 
+  roles: 
+     - role: virt.wordpress 
+          database_name: <name> 
+          database_user: <user> 
+          database_password: <password> 
+          wp_domain: aws.example.com 
+          initial_post_title: Hey There 
+          initial_post_content: This is running on AWS 
+
+# This information is representative of meta data set in a previous chapter. It is not created here.

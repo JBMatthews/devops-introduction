@@ -1,0 +1,20 @@
+# Code snippet corresponds with Lesson 7 Ansible AWS, slide #55
+"key_aws_ansible": [
+   "52.38.106.235"
+],
+
+"security_group_ssh_and_http": [
+   "52.38.106.235"
+],
+
+"tag_project_AnsibleWordPress": [
+   "52.38.106.235"
+],
+
+"type_t2_micro": [
+   "52.38.106.235"
+],
+
+"us-west-2": [
+   "52.38.106.235"
+],

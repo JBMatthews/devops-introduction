@@ -1,0 +1,17 @@
+- name: Create instances 
+  ec2: 
+      image: ami-9abea4fb 
+      region: "{{aws_region}}" 
+      instance_type: t2.micro 
+      instance_tags: 
+          project: AnsibleAuto 
+      count_tag: 
+          project: AnsibleAuto 
+      exact_count: 1 
+      group_id: "{{security_group.group_id}}" 
+      vpc_subnet_id: "{{subnets.subnet.id}}" 
+      key_name: "{{ssh_key.results[0].key.name}}" 
+      wait: yes 
+      assign_public_ip: true 
+  register: instances 
+- debug: msg="{{instances.tagged_instances[0].public_dns_name}}" 

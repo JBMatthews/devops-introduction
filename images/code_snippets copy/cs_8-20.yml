@@ -1,0 +1,21 @@
+--- 
+driver: 
+name: docker 
+use_sudo: false 
+
+provisioner: 
+name: ansible_playbook 
+playbook: playbook.yml 
+hosts: all 
+require_chef_for_busser: false 
+require_ruby_for_busser: true 
+platforms: 
+- name: ubuntu 
+driver_config: 
+image: ubuntu:14.04 
+
+suites: 
+- name: default 
+
+verifier: 
+ruby_bindir: '/usr/bin' 

@@ -1,0 +1,21 @@
+--- 
+driver: 
+   name: vagrant 
+
+provisioner: 
+   name: ansible_
+   playbook playbook: playbook.yml 
+   hosts: all 
+   require_chef_for_busser: false 
+   require_ruby_for_busser: true 
+
+platforms: 
+- name: ubuntu 
+  driver_config: 
+     box: "ubuntu/trusty64" 
+
+suites: 
+    - name: default 
+
+verifier: 
+    ruby_bindir: '/usr/bin' 
