@@ -313,3 +313,4 @@ dependencies:
 #### Conclusion
 
 Can you believe all you've learned, and do you realize it's potential? Ansible roles are one of the most powerful parts of Ansible. They help keep your playbooks clean and readable. Remember, when creating a role, try to make sure that it is usable out of the box. Going forward, we’ll be using the roles that we created in this chapter to deploy multiple instances of WordPress in the same playbook.
+
